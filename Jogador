@@ -8,30 +8,31 @@ public class Jogador1 {
     public int y;
     public int larguraJogador;
     public int alturaJogador;
-    
+
     public Jogador1(int x, int y) {
         this.x = x;
         this.y = y;
         this.larguraJogador = 10;
         this.alturaJogador = 100;
     }
-    
-    public void desenharjogador(Graphics g) { 
+
+    public void desenharjogador(Graphics g) {
         g.setColor(new Color(255, 165, 0));
         g.fillRect(x, y, larguraJogador, alturaJogador);
     }
-public void atualizar () {
-	if(up) {
-		y = y - 4; 
-		
-	}else if(down) {
-			y = y + 4; 
-			
-		}
-	if(y+alturaJogador > Jogo.Altura) {
-		y = Jogo.Altura - alturaJogador;
-	}else if(y < 0) {
-		y = 1;
-	}
-	}
+
+    public void atualizar() {
+        if (up) {
+            y = y - 4;
+
+        } else if (down) {
+            y = y + 4;
+
+        }
+        if (y + alturaJogador > Jogo.Altura) {
+            y = Jogo.Altura - alturaJogador;
+        } else if (y < 0) {
+            y = 1;
+        }
+    }
 }
