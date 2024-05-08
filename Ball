@@ -17,7 +17,7 @@ public class Ball {
         this.x = x;
         this.y = y;
         this.diametroBall = 25; // Define o diâmetro da bola
-        int angulo = new Random().nextInt(180);
+        int angulo = new Random().nextInt(70);
         dx = Math.cos(Math.toRadians(angulo));
         dy = Math.sin(Math.toRadians(angulo));
     }
@@ -41,7 +41,7 @@ public class Ball {
                 (int) Jogo.Jogador2.larguraJogador, (int) Jogo.Jogador2.alturaJogador);
     
         if (Ball.intersects(Jogador)) {
-            int angulo = new Random().nextInt(180);
+            int angulo = new Random().nextInt(70);
             dx = Math.cos(Math.toRadians(angulo));
             dy = Math.sin(Math.toRadians(angulo));
             if (dx < 0) {
@@ -49,7 +49,7 @@ public class Ball {
             }
            // speedIncrement(); // Aumenta a velocidade quando a bola acerta a raquete
         } else if (Ball.intersects(Jogador2)) {
-            int angulo = new Random().nextInt(180);
+            int angulo = new Random().nextInt(70);
             dx = Math.cos(Math.toRadians(angulo));
             dy = Math.sin(Math.toRadians(angulo));
             if (dx > 0) {
